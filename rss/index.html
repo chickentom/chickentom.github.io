@@ -11,7 +11,15 @@
   </head>
   
   <body>
-
+    <p id="ChromeNotSupported"></p>
+    <script>
+      var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+      if (isChrome) {
+        alert("Chrome ist not supported. Please use another Browser instead.");
+        document.getElementById("ChromeNotSupported").innerHTML = "Chrome is not Supported. Please use another one instead";
+        window.stop();
+      }
+    </script>
   <iframe allowtransparency=true frameborder=0 id=rf sandbox="allow-same-origin allow-forms allow-scripts" scrolling=auto src="https://chickentom.epizy.com/rss" style="width:100%;height:100%"></iframe>
   </body>
   </html>
